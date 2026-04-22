@@ -28,6 +28,16 @@ public class PlayerBehavior : MonoBehaviour
        
         float moveDirection = GameManager.instance.inputManager.Movement; // Pega a direção do movimento vinda do sistema de input
         transform.Translate(moveDirection * Time.deltaTime * moveSpeed, 0, 0); // Move o personagem horizontalmente com base na direção e velocidade
+
+        if (moveDirection < 0)
+        {
+            transform.localScale = new Vector3((float)-0.7, (float)0.7, (float)0.7);
+        }
+        else
+        {
+            transform.localScale = new Vector3((float)0.7, (float)0.7, (float)0.7);
+        }
+
     }
 
     // Método chamado quando o jogador pressiona o botão de pulo
