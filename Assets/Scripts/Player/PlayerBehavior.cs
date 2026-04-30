@@ -31,11 +31,11 @@ public class PlayerBehavior : MonoBehaviour
 
         if (moveDirection < 0)
         {
-            transform.localScale = new Vector3((float)-0.7, (float)0.7, (float)0.7);
+            transform.localScale = new Vector3((float)-0.1, (float)0.1, (float)0.1);
         }
         else
         {
-            transform.localScale = new Vector3((float)0.7, (float)0.7, (float)0.7);
+            transform.localScale = new Vector3((float)0.1, (float)0.1, (float)0.1);
         }
 
     }
@@ -43,6 +43,7 @@ public class PlayerBehavior : MonoBehaviour
     // Método chamado quando o jogador pressiona o botão de pulo
     private void HandleJump()
     {
+        Debug.Log("Tentando pular");
         if (isGroundedChecker.IsGrounded() == false) // Se o jogador não estiver no chão, não pula
             return;
 
