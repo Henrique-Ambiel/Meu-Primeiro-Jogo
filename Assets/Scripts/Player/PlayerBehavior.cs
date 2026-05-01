@@ -31,11 +31,11 @@ public class PlayerBehavior : MonoBehaviour
 
         if (moveDirection < 0)
         {
-            transform.localScale = new Vector3((float)-0.1, (float)0.1, (float)0.1);
+            transform.localScale = new Vector3((float)-0.652, (float)0.652, (float)0.652);
         }
         else
         {
-            transform.localScale = new Vector3((float)0.1, (float)0.1, (float)0.1);
+            transform.localScale = new Vector3((float)0.652, (float)0.652, (float)0.652);
         }
 
     }

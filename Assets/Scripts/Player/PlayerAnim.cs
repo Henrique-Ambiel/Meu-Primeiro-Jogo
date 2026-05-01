@@ -12,9 +12,12 @@ public class PlayerAnim : MonoBehaviour
 
     void Update()
     {
-        bool isWalking = GameManager.instance.inputManager.Movement != 0;
+        float movement = GameManager.instance.inputManager.Movement;
 
-        animator.SetBool("isWalk", isWalking);
-        
+        bool isWalking = Mathf.Abs(movement) > 0.01f; //Verifica se o player andou
+
+        Debug.Log("isWalking: " + isWalking + " | movement: " + movement); //Testando se o personagem está andando
+
+        animator.SetBool("isWalk", isWalking); //Inicia animação
     }
 }
